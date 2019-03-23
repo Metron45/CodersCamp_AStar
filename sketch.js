@@ -11,8 +11,8 @@ function Cell() {
 }
 
 var grid;
-var col = 10;
-var row = 10;
+var col = 20;
+var row = 20;
 var w = 40;
 var rowInput,colInput,greeting;
 var start;
@@ -27,7 +27,7 @@ var buttonWall = document.getElementById("wall");
 
 function setup() {
   //width = height = 401
-  createCanvas(401,401);
+  createCanvas(601,601);
   colInput = createInput();
   colInput.position(100,70);
   colInput.changed(newText);
@@ -43,6 +43,8 @@ function setup() {
     }
   }
 }
+
+
 
 function newText(){
   col = parseInt(colInput.value());
@@ -63,7 +65,7 @@ function mousePressed() {
   for (var i = 0; i < col; i++){
     for (var j = 0; j < row; j++){
       if(grid[i][j].contains(mouseX,mouseY)){
-        grid[i][j].do();
+        grid[i][j].click();
       }
     }
   }
