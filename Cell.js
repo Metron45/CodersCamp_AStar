@@ -24,14 +24,12 @@ Cell.prototype.show = function(){
     stroke(25,18,38);
     strokeWeight(4);
     fill(255);
-    cellColor = color(0);
     rect(this.x, this.y, this.w, this.w);
 
     if(this.Clk){
         if(this.start){
             fill(239,183,4);
             rect(this.x,this.y,this.w,this.w);
-            this.wskSTART = [this.x,this.y];
         }
         else if(this.wall){
             fill(242,53,91);
@@ -60,16 +58,17 @@ Cell.prototype.click = function(i,j,number) {
         console.log("START: " + START);
     }
     else if(number > 0  && number < 6){
-        this.wall = true
+        this.wall = true;
         wall1D = [i,j];
         console.log("PRZESZKODA: " + wall1D);
     }else if(number > 5 && number < 7){
-        this.end = true
+        this.end = true;
         END = [i,j];
         console.log("END: " + END);
     }
     else{
+
+        alert("No more cells to choose!");
         this.end = false;
-        alert("zaznaczyles juz wszystkie potrzebne kafelki!")
     }
 }

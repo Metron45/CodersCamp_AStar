@@ -51,7 +51,12 @@ body {
     background:rgb(25,18,38);
     grid-area: main;
   }
-  
+ #main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
   
   .info, .header {
     display: flex;
@@ -60,8 +65,8 @@ body {
     color: white;
   }
 
+
 button{
-    position: absolute;
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid rgb(18, 203, 196);
@@ -71,15 +76,10 @@ button{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     text-decoration: none;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
   }
-  
-#draw{
-    top: 20%;
-    left: 53%;
-}
   
