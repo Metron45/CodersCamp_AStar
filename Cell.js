@@ -16,14 +16,15 @@ function Cell(x, y, w,) {
 }
 
 Cell.prototype.show = function(){
-    stroke(0);
-    fill(133);
+    stroke(25,18,38);
+    strokeWeight(4);
+    fill(0);
     cellColor = color(0);
     rect(this.x, this.y, this.w, this.w);
 
     if(this.wall){
-        fill(255,0,0);
-    rect(this.x,this.y,this.w,this.w);
+        fill(237, 76, 103);
+        rect(this.x,this.y,this.w,this.w);
     }
     else{
         fill(255);
@@ -33,11 +34,11 @@ Cell.prototype.show = function(){
     if(this.Clk){
         this.wskSTART = [this.x,this.y];
         if(this.start){
-            fill(0,0,255);
+            fill(18, 203, 196);
             rect(this.x,this.y,this.w,this.w);
             this.wskSTART = [this.x,this.y];
         }else{
-            fill(0,255,0);
+            fill(163, 203, 56);
             rect(this.x,this.y,this.w,this.w);
             this.wskEND = [this.x,this.y];
         }

@@ -27,12 +27,15 @@ var buttonWall = document.getElementById("wall");
 
 function setup() {
   //width = height = 401
-  createCanvas(601,601);
+  var can = createCanvas(801,601);
+  var x = ((windowWidth+300) - width) / 2;
+  var y = ((windowHeight+150) - height) / 2;
+  can.position(x, y+20);
   colInput = createInput();
-  colInput.position(100,70);
+  colInput.position(x+315,y-130);
   colInput.changed(newText);
-  greeting = createElement('h2', 'wprowadź wymiary siatki');
-  greeting.position(50, 20);
+  greeting = createElement('h2', 'Podaj liczbe kolumn kwadratowej siatki');
+  greeting.position(x+100, y-200);
 
   w = floor(width / col);
 
