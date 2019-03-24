@@ -71,7 +71,7 @@ button{
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
-    padding: 0.8em 1.8em;
+    padding: 0.5em 1em;
     text-decoration: none;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -79,19 +79,19 @@ button{
   }
   
 #start{
-    top: 21%;
+    top: 30%;
     left: 32%;
 }
 #wall{
-    top: 21%;
+    top: 30%;
     left: 52%;
 }
 #end{
-    top: 21%;
+    top: 30%;
     left: 72%;
 }
 #draw{
-    top: 15%;
+    top: 20%;
     left: 53%;
 }
   

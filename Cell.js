@@ -1,9 +1,15 @@
-function Cell(x, y, w,) {
+function Cell(x, y, w,prev) {
     this.wskSTART;
     this.wskEND;
     this.x = x;
     this.y = y; 
     this.w = w;
+
+    this.status = 'free';
+    this.next = null;
+    this.prev = prev;
+    if(prev!=null) prev.next = this;
+
     this.start = false;
     if( random(1) < 0.3){
         this.wall = true;
