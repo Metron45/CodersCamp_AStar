@@ -78,18 +78,6 @@ button{
     font-weight: 700;
   }
   
-#start{
-    top: 30%;
-    left: 32%;
-}
-#wall{
-    top: 30%;
-    left: 52%;
-}
-#end{
-    top: 30%;
-    left: 72%;
-}
 #draw{
     top: 20%;
     left: 53%;

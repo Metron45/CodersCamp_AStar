@@ -15,15 +15,9 @@ var col = 20;
 var row = 20;
 var w = 40;
 var rowInput,colInput,greeting;
-var start;
-var wall;
-var end;
 var openSet = [];
 var closedSet = [];
 
-var buttonStart = document.getElementById("start");
-var buttonEnd = document.getElementById("end");
-var buttonWall = document.getElementById("wall");
 
 function setup() {
   //width = height = 401
@@ -62,18 +56,26 @@ function newText(){
     }
   }
 }
-
+//zliczanie klikniec mysza
+var number = 0;
+var mouseClicked = function() {
+  number++;
+}
+//dla 0 klikniec przypisuje start grida
+//jesli liczba klikniec=1 to mete
+//jesl wiecej niz 1 to alert
 
 function mousePressed() {
   for (var i = 0; i < col; i++){
     for (var j = 0; j < row; j++){
       if(grid[i][j].contains(mouseX,mouseY)){
-        grid[i][j].click();
+        grid[i][j].click(i,j,number);
       }
     }
   }
 }
 
+// ...Cell.prototype.click = function(i,j,number)  W Cell.js
 
 function draw() {
   background(255);
