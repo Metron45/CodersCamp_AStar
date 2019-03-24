@@ -1,4 +1,4 @@
-function A_star_findPath (node_array) {
+function A_star (node_array) {
     var goal = A_star_findGoal(node_array);
     var start = A_start_findStart(node_array);
     start.score = 0;
