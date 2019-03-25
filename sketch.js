@@ -58,8 +58,6 @@ function newText(){
 var number = 0;
 function mouseClicked() {
     number++;
-
-
 }
 //dla 0 klikniec przypisuje start grida
 //jesli liczba klikniec=1 to mete

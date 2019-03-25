@@ -1,4 +1,33 @@
-function A_star (node_array) {
+function initialize(){
+	var node_arr = [];
+ for (var i = 0; i < col; i++){
+    for (var j = 0; j < row; j++){
+      node_arr[i][j] = new Node(i, j, null);
+    }
+  }
+var temp_neighbours;
+
+  for (var i = 0; i < col; i++){
+    for (var j = 0; j < row; j++){
+      temp_neighbours = [];
+      if(node_arr[i+1][j] != null)
+      	temp_neighbours.push(node_arr[i+1][j])
+      if(node_arr[i-1][j] != null)
+      	temp_neighbours.push(node_arr[i-1][j])
+      if(node_arr[i][j+1] != null)
+      	temp_neighbours.push(node_arr[i][j+1])
+      if(node_arr[i][j-1] != null)
+      	temp_neighbours.push(node_arr[i][j-1])
+      node_arr[i][j].set_neighbours(temp_neighbours);
+    }
+  }
+
+  return node_arr;
+}
+
+var node_array_glob = initialize();
+
+function A_star_findPath (node_array) {
     var goal = A_star_findGoal(node_array);
     var start = A_start_findStart(node_array);
     start.score = 0;
@@ -76,10 +105,10 @@ function A_star_set_heuristic(goal, node_array) {
     for(var i = 0; i < node_array.lenght; i++){
         for (var y = 0; y < node_array[i].lenght; y++) {
             if (node_array[i][y].status === 'block'){
-                node_array[i][y].set_heuristic_scire( Number.MAX_SAFE_INTEGER );
+                node_array[i][y].set_heuristic_score( Number.MAX_SAFE_INTEGER );
             }
             else{
-                node_array[i][y].set_heuristic_scire( A_star_distance(node_array[i][y], goal) );
+                node_array[i][y].set_heuristic_score( A_star_distance(node_array[i][y], goal) );
             }
         }
     }

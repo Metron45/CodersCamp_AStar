@@ -1,12 +1,11 @@
 var checkedList = [];
 var pointer;
 
-function CheckAll(chk)
-{
-for (i = 0; i < chk.length; i++){
-    checkedList[i] = chk[i].checked; 
-}
-return Set(checkedList);
+function CheckAll(chk){
+    for (i = 0; i < chk.length; i++){
+        checkedList[i] = chk[i].checked; 
+    }
+    return Set(checkedList);
 }
 
 function Set(checkedList){
